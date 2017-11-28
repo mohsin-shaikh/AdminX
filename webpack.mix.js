@@ -11,6 +11,11 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.js('build/js/adminx.js', 'dist/js')
+   .sass('build/scss/adminx.scss', 'dist/css', { outputStyle: 'compressed' });
+
+mix.browserSync('127.0.0.1:8080');
+
 // mix.js('src/app.js', 'dist/')
 //    .sass('src/app.scss', 'dist/');
 

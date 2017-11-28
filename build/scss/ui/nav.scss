@@ -1,0 +1,9 @@
+.nav-collapse-icon {
+  width: 1.125rem;
+  transform: rotate(90deg);
+  @include transition;
+}
+
+.collapsed .nav-collapse-icon {
+  transform: rotate(0deg);
+}
