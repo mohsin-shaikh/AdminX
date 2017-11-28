@@ -1,0 +1,35 @@
+.card-header-title,
+.card-info-title {
+  font-size: .75rem;
+  font-weight: 700;
+
+  @extend .text-uppercase;
+}
+
+.card-header-actions {
+  padding-top: .25rem;
+  display: flex;
+}
+
+.card-header-action {
+  display: block;
+  margin-left: .25rem;
+  .feather {
+    width: 1rem;
+  }
+
+  @include hover-focus-active {
+    text-decoration: none;
+  }
+}
+
+.card-title-sub {
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.card-icon {
+  background-color: rgba($white, 0.15);
+  width: 6rem;
+  padding: $spacer * 0.5;
+}

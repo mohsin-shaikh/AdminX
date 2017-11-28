@@ -11,6 +11,8 @@
   .nav-link {
     font-size: .875rem;
     color: rgba(0,0,0,0.5);
+    padding-left: 0;
+    padding-right: 0;
 
     @include hover-focus-active {
       color: #000;
@@ -24,11 +26,15 @@
   .nav-icon {
     width: 1rem;
   }
+
+  &-brand {
+    padding: $navbar-padding-y $navbar-padding-x;
+  }
 }
 .adminx-sidebar-collapse {
   background: #f9f9f9;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
   border-bottom: 1px solid #f1f1f1;
   border-top: 1px solid #f1f1f1;
 

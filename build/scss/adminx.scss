@@ -1,12 +1,33 @@
 $body-bg: #f6f9fa;
 $sidebar-zindex: 1440; 
 $sidebar-width: 260px;
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-divider: "›";
+$breadcrumb-margin-bottom: .5rem;
+$headings-font-weight: 300;
+$card-border-radius: 0;
+$card-cap-bg: transparent;
 
 @import "~bootstrap/scss/bootstrap";
+
+@import "misc/utilities";
+
 @import "ui/sidebar";
 @import "ui/nav";
+@import "ui/breadcrumb";
+@import "ui/card";
 
-.adminx-content {
+.adminx-container {
   width: 100%;
   height: 100vh;
+}
+
+.adminx-header {
+  height: 3.5rem;
+}
+
+.adminx-content {
+  padding-left: $sidebar-width;
 }
