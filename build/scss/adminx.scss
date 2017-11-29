@@ -19,6 +19,9 @@ $table-hover-bg: #f4f9fe;
 $table-accent-bg: #f9f9f9;
 $table-selected-bg: #FFFBCC;
 
+$input-btn-padding-y: 0.5rem;
+$input-btn-focus-width: 0.1rem;
+
 
 
 @import "~bootstrap/scss/bootstrap";
@@ -34,6 +37,9 @@ $table-selected-bg: #FFFBCC;
 @import "ui/form";
 @import "ui/table";
 @import "ui/pagination";
+@import "ui/button";
+
+@import "pages/login";
 
 .adminx-container {
   width: 100%;

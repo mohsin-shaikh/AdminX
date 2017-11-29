@@ -22,9 +22,22 @@
   }
 }
 
+.form-control {
+  font-size: $font-size-sm;
+}
+
 // Fix for custom checkbox
 .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
   background-size: .625rem;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+// Label
+.form-label {
+  font-size: .75rem;
+  font-weight: bold;
+  color: $gray-700;
+
+  @extend .text-uppercase;
 }

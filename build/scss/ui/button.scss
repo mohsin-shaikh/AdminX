@@ -1,0 +1,32 @@
+.btn-facebook {
+  @include button-variant(#3b5998, #3b5998);
+}
+
+.btn-twitter {
+  @include button-variant(#1da1f2, #1da1f2);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  > span {
+    display: inline-block;
+    width: 2.5rem;
+    margin-left: -0.5rem;
+
+    svg {
+      height: 1rem;
+
+      &.feather {
+        transform: translateY(2px);
+      }
+    }  
+  }
+
+  + .btn-icon {
+    margin-top: $spacer * 0.5;
+  }
+}
