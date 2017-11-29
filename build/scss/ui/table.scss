@@ -1,0 +1,22 @@
+.table thead th {
+  border-top: 0;
+}
+.table {
+  font-size: .875rem;
+
+  .custom-control.custom-checkbox {
+    display: block;
+  }
+
+  tr.selected th,
+  tr.selected td {
+    background-color: $table-selected-bg;
+  }
+}
+
+.table-actions tr td:last-child,
+.table-actions tr th:last-child {
+  text-align: right;
+  white-space: nowrap;
+  width: 1px;
+}

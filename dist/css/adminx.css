@@ -2007,11 +2007,11 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0,0,0,0.05);
+  background-color: #f9f9f9;
 }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0,0,0,0.075);
+  background-color: #f4f9fe;
 }
 
 .table-primary,
@@ -2137,16 +2137,16 @@ pre code {
 .table-active,
 .table-active>th,
 .table-active>td {
-  background-color: rgba(0,0,0,0.075);
+  background-color: #f4f9fe;
 }
 
 .table-hover .table-active:hover {
-  background-color: rgba(0,0,0,0.075);
+  background-color: #ddecfc;
 }
 
 .table-hover .table-active:hover>td,
 .table-hover .table-active:hover>th {
-  background-color: rgba(0,0,0,0.075);
+  background-color: #ddecfc;
 }
 
 .table .thead-dark th {
@@ -4791,7 +4791,7 @@ tbody.collapse.show {
 
   .adminx-header .navbar {
     padding-left: calc(260px + 15px);
-    background: transparent;
+    background: #f6f9fa;
     border-bottom: 0;
   }
 }
@@ -4845,6 +4845,15 @@ tbody.collapse.show {
   padding: .5rem;
 }
 
+.card-footer {
+  padding: 1rem 1.25rem;
+}
+
+.card>.table th,
+.card>.table td {
+  padding-left: 1.25rem;
+}
+
 .form-quicksearch .form-control {
   background: transparent;
   border: 0 none;
@@ -4870,6 +4879,54 @@ tbody.collapse.show {
   width: 1rem;
   margin-top: 1px;
   stroke: #007bff;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+  background-size: .625rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.table thead th {
+  border-top: 0;
+}
+
+.table {
+  font-size: .875rem;
+}
+
+.table .custom-control.custom-checkbox {
+  display: block;
+}
+
+.table tr.selected th,
+.table tr.selected td {
+  background-color: #FFFBCC;
+}
+
+.table-actions tr td:last-child,
+.table-actions tr th:last-child {
+  text-align: right;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.pagination-clean {
+  border-radius: 0;
+}
+
+.pagination-clean .page-link {
+  border-radius: 0;
+  border: 0;
+  color: #adb5bd;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-clean .page-item.active .page-link {
+  background-color: transparent;
+  color: #000;
+  font-weight: bold;
 }
 
 .adminx-container {

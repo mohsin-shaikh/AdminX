@@ -21,3 +21,10 @@
     background: transparent;
   }
 }
+
+// Fix for custom checkbox
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+  background-size: .625rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}

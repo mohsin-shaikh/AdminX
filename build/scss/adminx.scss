@@ -1,17 +1,25 @@
 $body-bg: #f6f9fa;
+$enable-gradients: true;
+$headings-font-weight: 300;
+
 $sidebar-zindex: 1440; 
 $sidebar-width: 260px;
+$sidebar-collapsed-width: 4rem;
+
 $breadcrumb-bg: transparent;
 $breadcrumb-padding-y: 0;
 $breadcrumb-padding-x: 0;
 $breadcrumb-divider: "›";
 $breadcrumb-margin-bottom: .5rem;
-$headings-font-weight: 300;
+
 $card-border-radius: 0;
 $card-cap-bg: transparent;
-$sidebar-collapsed-width: 4rem;
 
-$enable-gradients: true;
+$table-hover-bg: #f4f9fe;
+$table-accent-bg: #f9f9f9;
+$table-selected-bg: #FFFBCC;
+
+
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -24,6 +32,8 @@ $enable-gradients: true;
 @import "ui/card";
 @import "ui/dropdown";
 @import "ui/form";
+@import "ui/table";
+@import "ui/pagination";
 
 .adminx-container {
   width: 100%;

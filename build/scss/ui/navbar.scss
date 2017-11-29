@@ -83,7 +83,7 @@
 
   .adminx-header .navbar {
     padding-left: calc(#{$sidebar-width} + 15px);
-    background: transparent;
+    background: $body-bg;
     border-bottom: 0;
   }
 }
