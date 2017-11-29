@@ -1,3 +1,100 @@
+.sidebar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: .875rem;
+  min-width: $sidebar-width;
+
+  &-icon,
+  &-abbr {
+    display: inline-block;
+    width: 1.75rem;
+    display: flex;
+    align-items: center;
+
+    .feather {
+      width: 1rem;
+    }
+  }
+
+  &-abbr {
+    font-weight: bold;
+  }
+
+  &-link {
+    padding-left: $spacer  * 1.5;
+    padding-right: $spacer * 1.5;
+    padding-top: $spacer * 0.5;
+    padding-bottom: $spacer * 0.5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $gray-600;
+
+    @include hover-focus-active {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: theme-color("primary");
+    }
+  }
+
+  &-end {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+.sidebar-sub-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: $spacer * 0.5 0;
+  font-size: .875rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+.adminx-sidebar.expand-hover {
+  width: $sidebar-collapsed-width;
+  overflow-x: hidden;
+  .sidebar-nav {
+    &-end,
+    &-name {
+      opacity: 0;
+    }
+  }
+
+  .navbar-brand {
+    opacity: 0;
+  }
+
+  &:hover {
+    width: $sidebar-width;
+
+    .sidebar-nav {
+      &-end,
+      &-name {
+        opacity: 1;
+      }
+    }
+
+    .navbar-brand {
+      opacity: 1;
+    }
+  }
+}
+
+.sidebar-nav-end,
+.sidebar-nav-name,
+.adminx-sidebar {
+  @include transition;
+}
+
+
+
+
+
 .adminx-sidebar {
   background: $white;
   position: fixed;
@@ -8,43 +105,7 @@
   z-index: $sidebar-zindex;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 
-  .nav-link {
-    font-size: .875rem;
-    color: rgba(0,0,0,0.5);
-    padding-left: 0;
-    padding-right: 0;
-
-    @include hover-focus-active {
-      color: #000;
-    }
-
-    &.active {
-      color: #000;
-    }
-  }
-
-  .nav-icon {
-    width: 1rem;
-  }
-
   &-brand {
     padding: $navbar-padding-y $navbar-padding-x;
-  }
-}
-.adminx-sidebar-collapse {
-  background: #f9f9f9;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  border-bottom: 1px solid #f1f1f1;
-  border-top: 1px solid #f1f1f1;
-
-  @extend .p-3;
-
-  .nav-link {
-    font-size: .75rem;
-  }
-
-  .nav-icon {
-    transform: scale(0.75);
   }
 }

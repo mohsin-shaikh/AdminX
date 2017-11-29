@@ -9,6 +9,7 @@ $breadcrumb-margin-bottom: .5rem;
 $headings-font-weight: 300;
 $card-border-radius: 0;
 $card-cap-bg: transparent;
+$sidebar-collapsed-width: 4rem;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -27,7 +28,15 @@ $card-cap-bg: transparent;
 .adminx-header {
   height: 3.5rem;
 }
-
 .adminx-content {
   padding-left: $sidebar-width;
+  @include transition;
+}
+
+.expand-hover + .adminx-container .adminx-content {
+  padding-left: 4rem;
+}
+
+.expand-hover.push:hover + .adminx-container .adminx-content {
+  transform: translateX(calc(#{$sidebar-width} - #{$sidebar-collapsed-width}));
 }
