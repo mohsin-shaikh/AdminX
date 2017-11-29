@@ -124,8 +124,8 @@
 
     <div class="adminx-container">
       <div class="adminx-header">
-        <nav class="navbar navbar-expand-sm justify-content-between fixed-top navbar-light bg-light">
-          <form class="form-inline form-quicksearch">
+        <nav class="navbar navbar-expand justify-content-between fixed-top navbar-light">
+          <form class="form-inline form-quicksearch d-none d-md-block">
             <div class="input-group">
               <div class="input-group-addon">
                 <i data-feather="search"></i>
@@ -134,7 +134,18 @@
             </div>
           </form>
 
-          <ul class="navbar-nav">
+          <div class="d-flex flex-1 d-block d-md-none">
+            <a href="#" class="sidebar-toggle">
+              <i data-feather="menu"></i>
+            </a>
+          </div>
+
+          <a class="navbar-brand mb-0 h1 d-block d-md-none" href="#">
+            <img src="./demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+            AdminX
+          </a>
+
+          <ul class="navbar-nav flex-1 d-flex justify-content-end">
             <!-- Notificatoins -->
             <li class="nav-item dropdown">
               <a class="nav-link nav-link-notifications" id="dropdownNotifications" data-toggle="dropdown" href="#">

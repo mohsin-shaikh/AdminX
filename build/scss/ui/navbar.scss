@@ -3,11 +3,13 @@
   font-size: $font-size-sm;
 
   .navbar {
-    padding-left: calc(#{$sidebar-width} + 15px);
     @include transition;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 
+// User Profile
 .avatar-with-name {
   > img {
     border-radius: 15px;
@@ -18,10 +20,15 @@
   > span {
     padding-left: .25rem;
     padding-top: .2rem;
-    display: inline-block;
+    display: none;
+  }
+
+  &:after {
+    display: none;
   }
 }
 
+// Logo
 .navbar-brand-image {
   width: 1.875rem;
   height: 1.875rem;
@@ -64,4 +71,19 @@
   font-weight: 700;
 
   @extend .text-uppercase;
+}
+
+@include media-breakpoint-up(md) {
+  .avatar-with-name {
+    span,
+    &:after {
+      display: inline-block;
+    }
+  }
+
+  .adminx-header .navbar {
+    padding-left: calc(#{$sidebar-width} + 15px);
+    background: transparent;
+    border-bottom: 0;
+  }
 }

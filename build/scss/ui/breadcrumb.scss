@@ -1,4 +1,9 @@
 .adminx-page-breadcrumb {
-  margin-top: -.5rem; // align with the sidebar navigation
   font-size: .875rem;
+}
+
+@include media-breakpoint-up(md) {
+  .adminx-page-breadcrumb {
+    margin-top: -0.5rem; // align with the sidebar navigation
+  }
 }
