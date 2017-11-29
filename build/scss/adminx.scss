@@ -11,32 +11,37 @@ $card-border-radius: 0;
 $card-cap-bg: transparent;
 $sidebar-collapsed-width: 4rem;
 
+$enable-gradients: true;
+
 @import "~bootstrap/scss/bootstrap";
 
 @import "misc/utilities";
 
 @import "ui/sidebar";
 @import "ui/nav";
+@import "ui/navbar";
 @import "ui/breadcrumb";
 @import "ui/card";
+@import "ui/form";
 
 .adminx-container {
   width: 100%;
   height: 100vh;
-}
-
-.adminx-header {
-  height: 3.5rem;
 }
 .adminx-content {
   padding-left: $sidebar-width;
   @include transition;
 }
 
-.expand-hover + .adminx-container .adminx-content {
+.expand-hover + .adminx-container .adminx-content{
   padding-left: 4rem;
 }
-
+.expand-hover + .adminx-container .adminx-header .navbar {
+  padding-left: calc(4rem + 15px);
+}
 .expand-hover.push:hover + .adminx-container .adminx-content {
+  transform: translateX(calc(#{$sidebar-width} - #{$sidebar-collapsed-width}));
+}
+.expand-hover.push:hover + .adminx-container .adminx-header .navbar {
   transform: translateX(calc(#{$sidebar-width} - #{$sidebar-collapsed-width}));
 }

@@ -7,3 +7,32 @@
 .collapsed .nav-collapse-icon {
   transform: rotate(0deg);
 }
+
+.nav-seperator {
+  position: relative;
+  width: 2rem;
+
+  &:after {
+    content: ' ';
+    display: block;
+    top: .75rem;
+    bottom: .75rem;
+    left: 50%;
+    width: 1px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.nav-link-notifications {
+  .feather {
+    height: 1.875rem;
+  }
+}
+
+.nav-link-notification-number {
+  font-weight: bold;
+  padding-left: $spacer * 0.25;
+  padding-left: .25rem;
+  padding-top: .2rem;
+}

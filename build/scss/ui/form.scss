@@ -1,0 +1,23 @@
+.form-quicksearch {
+  .form-control {
+    background: transparent;
+    border: 0 none;
+    font-size: $font-size-sm;
+    padding-left: $spacer * 0.5;
+
+    @include hover-focus-active {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .input-group-addon {
+    .feather {
+      width: 1rem;
+      margin-top: 1px;
+      stroke: theme-color("primary");
+    }
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+}
