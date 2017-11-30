@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AdminX - Progress Bars</title>
+    <title>AdminX - Form Elements</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -126,7 +126,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navForms" aria-expanded="false" aria-controls="navForms">
+          <a class="sidebar-nav-link" data-toggle="collapse" href="#navForms" aria-expanded="false" aria-controls="navForms">
             <span class="sidebar-nav-icon">
               <i data-feather="edit"></i>
             </span>
@@ -138,9 +138,9 @@
             </span>
           </a>
 
-          <ul class="sidebar-sub-nav collapse" id="navForms">
+          <ul class="sidebar-sub-nav collapse show" id="navForms">
             <li class="sidebar-nav-item">
-              <a href="./form_elements.html" class="sidebar-nav-link">
+              <a href="./form_elements.html" class="sidebar-nav-link active">
                 <span class="sidebar-nav-abbr">
                   El
                 </span>
@@ -186,7 +186,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="sidebar-nav-link" data-toggle="collapse" href="#navUI" aria-expanded="false" aria-controls="navUI">
+          <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navUI" aria-expanded="false" aria-controls="navUI">
             <span class="sidebar-nav-icon">
               <i data-feather="grid"></i>
             </span>
@@ -194,11 +194,11 @@
               UI Elements
             </span>
             <span class="sidebar-nav-end">
-                  <i data-feather="chevron-right" class="nav-collapse-icon"></i>
+              <i data-feather="chevron-right" class="nav-collapse-icon"></i>
             </span>
           </a>
 
-          <ul class="sidebar-sub-nav collapse show" id="navUI">
+          <ul class="sidebar-sub-nav collapse" id="navUI">
             <li class="sidebar-nav-item">
               <a href="./icons.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
@@ -233,7 +233,7 @@
             </li>
 
             <li class="sidebar-nav-item">
-              <a href="./progress.html" class="sidebar-nav-link active">
+              <a href="./progress.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
                   Pr
                 </span>
@@ -439,176 +439,282 @@
           <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb adminx-page-breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
-              <li class="breadcrumb-item active  aria-current="page">Progress Bars</li>
+              <li class="breadcrumb-item"><a href="#">Forms</a></li>
+              <li class="breadcrumb-item active  aria-current="page">Elements</li>
             </ol>
           </nav>
 
           <div class="pb-3">
-            <h1>Progress Bars</h1>
+            <h1>Elements</h1>
           </div>
 
           <div class="row">
             <div class="col-lg-6">
               <div class="card mb-grid">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bars</div>
+                  <div class="card-header-title">Basic Form Example</div>
+
+                  <nav class="card-header-actions">
+                    <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
+                      <i data-feather="minus-circle"></i>
+                    </a>
+                    
+                    <div class="dropdown">
+                      <a class="card-header-action" href="#" role="button" id="card1Settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="settings"></i>
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="card1Settings">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-header-action">
+                      <i data-feather="x-circle"></i>
+                    </a>
+                  </nav>
                 </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                <div class="card-body collapse show" id="card1">
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label" for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Remember me</span>
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
                 </div>
               </div>
 
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Backgrounds</div>
+                <div class="card-header">
+                  <div class="card-header-title">Input sizes</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                  <input class="form-control mb-2 form-control-lg" type="text" placeholder=".form-control-lg">
+                  <input class="form-control mb-2" type="text" placeholder="Default input">
+                  <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
                 </div>
               </div>
 
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Striped</div>
+                <div class="card-header">
+                  <div class="card-header-title">Column sizing</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                  <form>
+                    <div class="form-row">
+                      <div class="col-7">
+                        <input type="text" class="form-control" placeholder="City">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="State">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Zip">
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
 
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Animations</div>
+                <div class="card-header">
+                  <div class="card-header-title">Validation</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-progressing" role="progressbar"></div>
-                  </div>
+                  <p>
+                    The example below uses a flexbox utility to vertically center the contents and changes <code class="highlighter-rouge">.col</code> to <code class="highlighter-rouge">.col-auto</code> so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+                  </p>
+                  <form id="needs-validation" novalidate>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationCustom01">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationCustom02">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationCustom03">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationCustom04">State</label>
+                        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationCustom05">Zip</label>
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary mr-2" type="submit">Submit form</button>
+                    <small class="text-muted">
+                      Click submit to test validation feature
+                    </small>
+                  </form>
+                </div>
+              </div>
 
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-shaking" role="progressbar"></div>
-                  </div>
+              <div class="card mb-grid">
+                <div class="card-header">
+                  File upload
+                </div>
+                <div class="card-body">
+                  <label class="custom-file">
+                    <input type="file" id="file2" class="custom-file-input">
+                    <span class="custom-file-control"></span>
+                  </label>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bars with Label</div>
+                <div class="card-header">
+                  <div class="card-header-title">Horizontal form</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                  </div>
-
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                  </div>
-
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                  </div>
-
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
-                  </div>
+                  <form>
+                    <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword3" class="col-sm-2 col-form-label form-label">Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      </div>
+                    </div>
+                    <fieldset class="form-group">
+                      <div class="row">
+                        <legend class="col-form-legend col-sm-2 form-label">Radios</legend>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                              Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                              Option two can be something else and selecting it will deselect option one
+                            </label>
+                          </div>
+                          <div class="form-check disabled">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                              Option three is disabled
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="form-group row">
+                      <div class="col-sm-2 form-label pt-1">Checkbox</div>
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Check me out
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
 
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bars height</div>
+                <div class="card-header">
+                  <div class="card-header-title">Form controls</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress mb-3" style="height: 1px;">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3" style="height: 10px;">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3" style="height: 20px;">
-                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3" style="height: 40px;">
-                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                  <p>
+                    Textual form controls—like <code class="highlighter-rouge">&lt;input&gt;</code>s, <code class="highlighter-rouge">&lt;select&gt;</code>s, and <code class="highlighter-rouge">&lt;textarea&gt;</code>s—are styled with the <code class="highlighter-rouge">.form-control</code> class. Included are styles for general appearance, focus state, sizing, and more.
+                  </p>
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label" for="exampleFormControlInput1">Email address</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="exampleFormControlSelect1">Example select</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="exampleFormControlSelect2">Example multiple select</label>
+                      <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </form>
                 </div>
               </div>
 
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Multiple Bars</div>
+                <div class="card-header">
+                  <div class="card-header-title">Validation errors</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Animated</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label class="form-label is-invalid">Invalid Field</label>
+                      <input type="email" class="form-control is-invalid" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text invalid-feedback">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label is-valid">VALID</label>
+                      <input type="password" class="form-control is-valid" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
                 </div>
               </div>
             </div>

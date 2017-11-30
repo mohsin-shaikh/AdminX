@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AdminX - Progress Bars</title>
+    <title>AdminX - Advanced Elements</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -126,7 +126,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navForms" aria-expanded="false" aria-controls="navForms">
+          <a class="sidebar-nav-link" data-toggle="collapse" href="#navForms" aria-expanded="false" aria-controls="navForms">
             <span class="sidebar-nav-icon">
               <i data-feather="edit"></i>
             </span>
@@ -138,7 +138,7 @@
             </span>
           </a>
 
-          <ul class="sidebar-sub-nav collapse" id="navForms">
+          <ul class="sidebar-sub-nav collapse show" id="navForms">
             <li class="sidebar-nav-item">
               <a href="./form_elements.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
@@ -151,7 +151,7 @@
             </li>
 
             <li class="sidebar-nav-item">
-              <a href="./form_advanced.html" class="sidebar-nav-link">
+              <a href="./form_advanced.html" class="sidebar-nav-link active">
                 <span class="sidebar-nav-abbr">
                   Ad
                 </span>
@@ -186,7 +186,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="sidebar-nav-link" data-toggle="collapse" href="#navUI" aria-expanded="false" aria-controls="navUI">
+          <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navUI" aria-expanded="false" aria-controls="navUI">
             <span class="sidebar-nav-icon">
               <i data-feather="grid"></i>
             </span>
@@ -194,11 +194,11 @@
               UI Elements
             </span>
             <span class="sidebar-nav-end">
-                  <i data-feather="chevron-right" class="nav-collapse-icon"></i>
+              <i data-feather="chevron-right" class="nav-collapse-icon"></i>
             </span>
           </a>
 
-          <ul class="sidebar-sub-nav collapse show" id="navUI">
+          <ul class="sidebar-sub-nav collapse" id="navUI">
             <li class="sidebar-nav-item">
               <a href="./icons.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
@@ -233,7 +233,7 @@
             </li>
 
             <li class="sidebar-nav-item">
-              <a href="./progress.html" class="sidebar-nav-link active">
+              <a href="./progress.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
                   Pr
                 </span>
@@ -439,178 +439,46 @@
           <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb adminx-page-breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
-              <li class="breadcrumb-item active  aria-current="page">Progress Bars</li>
+              <li class="breadcrumb-item"><a href="#">Forms</a></li>
+              <li class="breadcrumb-item active  aria-current="page">Advanced Elements</li>
             </ol>
           </nav>
 
           <div class="pb-3">
-            <h1>Progress Bars</h1>
+            <h1>Advanced Elements</h1>
           </div>
 
           <div class="row">
             <div class="col-lg-6">
               <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bars</div>
+                <div class="card-header">
+                  <div class="card-header-title">Input sizes</div>
                 </div>
                 <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Backgrounds</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Striped</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Animations</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-progressing" role="progressbar"></div>
+                  <div class="form-group">
+                    <label class="form-label">Date</label>
+                    <input class="form-control mb-2" type="text" placeholder="Enter date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                   </div>
 
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-shaking" role="progressbar"></div>
+                  <div class="form-group">
+                    <label class="form-label">Phone Number (US)</label>
+                    <input class="form-control mb-2" type="text" placeholder="Enter phone number" data-inputmask='"mask": "(999) 999-9999"' data-mask>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Phone Number (International)</label>
+                    <input class="form-control mb-2" type="text" placeholder="Enter phone number" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">IP Adress</label>
+                    <input class="form-control mb-2" type="text" placeholder="Enter IP" data-inputmask="'alias': 'ip'" data-mask>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-6">
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bars with Label</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                  </div>
-
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                  </div>
-
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                  </div>
-
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bars height</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3" style="height: 1px;">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3" style="height: 10px;">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3" style="height: 20px;">
-                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3" style="height: 40px;">
-                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Multiple Bars</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Progress Bar Animated</div>
-                </div>
-                <div class="card-body">
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

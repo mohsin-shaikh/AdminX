@@ -3,4 +3,9 @@
  * Copyright 2017-2018 MOVACT
  * Licensed under MIT (https://github.com/movact/AdminX/blob/master/LICENSE)
  */
+
+ // feel free to comment out what you don't need
+ require('./polyfills');
 require('./bootstrap');
+require('./inputmasks');
+require('./feather');

@@ -25,6 +25,10 @@
 .form-control {
   font-size: $font-size-sm;
 }
+.form-control-lg {
+  font-size: $font-size-base;
+  padding: $spacer * 0.75 $spacer * 1.25;
+}
 
 // Fix for custom checkbox
 .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
@@ -40,4 +44,11 @@
   color: $gray-700;
 
   @extend .text-uppercase;
+
+  &.is-valid {
+    color: theme-color("success");
+  }
+  &.is-invalid {
+    color: theme-color("danger");
+  }
 }

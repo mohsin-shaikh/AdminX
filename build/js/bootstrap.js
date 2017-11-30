@@ -1,16 +1,35 @@
-import feather from 'feather-icons';
+// todo
+// i'd rather have this in vanilla JS so you can take this to non jquery environments
 
-$(document).ready(function() {
-  feather.replace();
 
-  // Sidebar
-  $('.sidebar-toggle').on('click', function(e) {
-    e.preventDefault();
-    $('.adminx-sidebar').toggleClass('in');
+document.addEventListener("DOMContentLoaded", function() {
+  // Sidebar toggle
+  const toggleElements = document.querySelectorAll('.sidebar-toggle');
+
+  Array.from(toggleElements).forEach(element => {
+    element.addEventListener('click', event => {
+      document.querySelectorAll('.adminx-sidebar')[0].classList.toggle('in');
+    });
   });
 
+  // Highlight table rows when selected
+  const rowCheckboxes = document.querySelectorAll('.table-select-row');
+
+  Array.from(rowCheckboxes).forEach(element => {
+    element.addEventListener('change', event => {
+      if (element.checked) {
+        element.closest('tr').classList.add('selected');
+      } else {
+        element.closest('tr').classList.remove('selected');
+      }
+    });
+  });
+});
+
+$(document).ready(function() {
+
   // Highlight row when selected
-  $('tr .table-select-row').change(function() {
+  /* $('tr .table-select-row').change(function() {
     // this will contain a reference to the checkbox   
     if (this.checked) {
       $(this).closest('tr').addClass('selected');
@@ -24,7 +43,7 @@ $(document).ready(function() {
         selectAll.prop('checked', false);
       }
     }
-  });
+  }); */
 
   // check all checkboxes in table
   $('tr .table-select-all').change(function() {
