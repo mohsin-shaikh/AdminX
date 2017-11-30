@@ -1,5 +1,5 @@
 {
-    "/dev/js/adminx.js": "/dev/js/adminx.js",
-    "/dev/css/adminx.css": "/dev/css/adminx.css",
-    "/dev/js/demo.js": "/dev/js/demo.js"
+    "/dist/js/adminx.js": "/dist/js/adminx.js",
+    "/dist/css/adminx.css": "/dist/css/adminx.css",
+    "/dist/js/demo.js": "/dist/js/demo.js"
 }

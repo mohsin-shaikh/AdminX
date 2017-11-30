@@ -18,17 +18,17 @@ When you downloaded the code install the dependencies:
 npm install
 ```
 
-We included a small locale development server. You can start it by running:
-```bash
-npm run serve
-```
-
 You can watch the assets and autocompile by running:
 ```bash
 npm run watch
 ```
 
-If you want to create a production build:
+We included a small locale development server with express. It serves the layout and will also rewrite the assets from using `/dev/` instead of the `/dist/` folder automatically.
+```bash
+npm run serve
+```
+
+If you're done and want to create a production build in the `/dist/` folder run
 ```bash
 npm run production
 ```

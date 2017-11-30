@@ -25,6 +25,7 @@ mix.options({
 
 mix.js('build/js/adminx.js', `${path}/js`)
    .js('build/js/demo.js', `${path}/js`)
-   .sass('build/scss/adminx.scss', `${path}/css`, { outputStyle: 'compressed', comments: false });
+   .sass('build/scss/adminx.scss', `${path}/css`, { outputStyle: 'compressed', comments: false })
+   .copyDirectory('build/media', `${path}/media`);
 
 mix.browserSync('127.0.0.1:8080');
