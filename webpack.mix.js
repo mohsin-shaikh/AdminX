@@ -37,4 +37,6 @@ mix.js('build/js/adminx.js', `${path}/js`)
    // Copy Icon Font
    .copyDirectory('./node_modules/open-iconic/font/fonts', `${path}/fonts/iconic`);
 
+mix.sass('build/scss/demo.scss', 'demo', { outputStyle: 'compressed', comments: false });
+
 mix.browserSync('127.0.0.1:8080');
