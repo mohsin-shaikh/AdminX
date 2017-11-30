@@ -84,7 +84,12 @@
 @include media-breakpoint-down(sm) {
   .adminx-sidebar {
     transform: translateX(-100%);
-    padding-top: $spacer *  0.5;
+
+    .sidebar-nav {
+      overflow: auto;
+      max-height: 100vh;
+      padding-top: $spacer * 0.5;
+    }
 
     .adminx-sidebar-brand {
       display: none;
