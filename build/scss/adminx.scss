@@ -1,8 +1,14 @@
+/*!
+ * AdminX v0.0.0 (https://github.com/MOVACT/AdminX)
+ * Copyright 2017-2018 MOVACT
+ * Licensed under MIT (https://github.com/movact/AdminX/blob/master/LICENSE)
+ */
+
 $body-bg: #f6f9fa;
 $enable-gradients: true;
 $headings-font-weight: 300;
 
-$sidebar-zindex: 1440; 
+$sidebar-zindex: 1440;
 $sidebar-width: 260px;
 $sidebar-collapsed-width: 4rem;
 
@@ -22,9 +28,11 @@ $table-selected-bg: #FFFBCC;
 $input-btn-padding-y: 0.5rem;
 $input-btn-focus-width: 0.1rem;
 
+$notifications-zindex: 2000;
 
 
-@import "~bootstrap/scss/bootstrap";
+
+@import "bootstrap";
 
 @import "misc/utilities";
 
@@ -38,8 +46,10 @@ $input-btn-focus-width: 0.1rem;
 @import "ui/table";
 @import "ui/pagination";
 @import "ui/button";
+@import "ui/notification";
 
 @import "pages/login";
+@import "pages/error";
 
 .adminx-container {
   width: 100%;

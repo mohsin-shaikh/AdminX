@@ -1,5 +1,9 @@
 .table thead th {
   border-top: 0;
+  font-size: .75rem;
+  color: $gray-700;
+
+  @extend .text-uppercase;
 }
 .table {
   font-size: .875rem;

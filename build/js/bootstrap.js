@@ -1,4 +1,4 @@
-const feather = require('feather-icons');
+import feather from 'feather-icons';
 
 $(document).ready(function() {
   feather.replace();

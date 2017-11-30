@@ -10,9 +10,20 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+mix.options({
+  cleanCss: {
+    level: {
+      1: {
+        specialComments: 'none'
+      }
+    }
+  }
+});
+
 
 mix.js('build/js/adminx.js', 'dist/js')
-   .sass('build/scss/adminx.scss', 'dist/css', { outputStyle: 'compressed' });
+   .js('build/js/demo.js', 'dist/js')
+   .sass('build/scss/adminx.scss', 'dist/css', { outputStyle: 'compressed', comments: false });
 
 mix.browserSync('127.0.0.1:8080');
 

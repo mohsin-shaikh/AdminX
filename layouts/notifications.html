@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" type="text/css" href="../dist/css/adminx.css" media="screen" />
+
+    <!-- this is only relevant for the demo -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
   </head>
   <body>
     <!-- expand-hover push -->
@@ -85,7 +88,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="sidebar-nav-link" data-toggle="collapse" href="#navTables" aria-expanded="false" aria-controls="navTables">
+          <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navTables" aria-expanded="false" aria-controls="navTables">
             <span class="sidebar-nav-icon">
               <i data-feather="align-justify"></i>
             </span>
@@ -97,9 +100,9 @@
             </span>
           </a>
 
-          <ul class="sidebar-sub-nav collapse show" id="navTables">
+          <ul class="sidebar-sub-nav collapse" id="navTables">
             <li class="sidebar-nav-item">
-              <a href="./tables.html" class="sidebar-nav-link active">
+              <a href="./tables.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
                   Re
                 </span>
@@ -183,7 +186,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#navUI" aria-expanded="false" aria-controls="navUI">
+          <a class="sidebar-nav-link" data-toggle="collapse" href="#navUI" aria-expanded="false" aria-controls="navUI">
             <span class="sidebar-nav-icon">
               <i data-feather="grid"></i>
             </span>
@@ -195,7 +198,7 @@
             </span>
           </a>
 
-          <ul class="sidebar-sub-nav collapse" id="navUI">
+          <ul class="sidebar-sub-nav collapse show" id="navUI">
             <li class="sidebar-nav-item">
               <a href="./icons.html" class="sidebar-nav-link">
                 <span class="sidebar-nav-abbr">
@@ -219,7 +222,7 @@
             </li>
 
             <li class="sidebar-nav-item">
-              <a href="./notifications.html" class="sidebar-nav-link">
+              <a href="./notifications.html" class="sidebar-nav-link active">
                 <span class="sidebar-nav-abbr">
                   No
                 </span>
@@ -436,275 +439,139 @@
           <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb adminx-page-breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Tables</a></li>
-              <li class="breadcrumb-item active  aria-current="page">Regular Tables</li>
+              <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
+              <li class="breadcrumb-item active  aria-current="page">Notifications</li>
             </ol>
           </nav>
 
           <div class="pb-3">
-            <h1>Regular Tables</h1>
+            <h1>Notifications</h1>
           </div>
 
           <div class="row">
-            <div class="col">
-              <div class="card mb-grid">
+            <div class="col-lg-6">
+              <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Table</div>
-                </div>
-                <table class="table table-actions table-striped table-responsive-md table-hover mb-0">
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        <label class="custom-control custom-checkbox m-0 p-0">
-                          <input type="checkbox" class="custom-control-input table-select-all">
-                          <span class="custom-control-indicator"></span>
-                        </label>
-                      </th>
-                      <th scope="col">First Name</th>
-                      <th scope="col">Last Name</th>
-                      <th scope="col">Username</th>
-                      <th scope="col">Roles</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">
-                        <label class="custom-control custom-checkbox m-0 p-0">
-                          <input type="checkbox" class="custom-control-input table-select-row">
-                          <span class="custom-control-indicator"></span>
-                        </label>
-                      </th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>
-                        <span class="badge badge-pill badge-primary">Admin</span>
-                      </td>
-                      <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <label class="custom-control custom-checkbox m-0 p-0">
-                          <input type="checkbox" class="custom-control-input table-select-row">
-                          <span class="custom-control-indicator"></span>
-                        </label>
-                      </th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>
-                        <span class="badge badge-pill badge-primary">Author</span>
-                        <span class="badge badge-pill badge-primary">Developer</span>
-                      </td>
-                      <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <label class="custom-control custom-checkbox m-0 p-0">
-                          <input type="checkbox" class="custom-control-input table-select-row">
-                          <span class="custom-control-indicator"></span>
-                        </label>
-                      </th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                      <td>
-                        <span class="badge badge-pill badge-danger">Inactive</span>
-                      </td>
-                      <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+                  <div class="card-header-title">Description</div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <!-- Table with border -->
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Table with border</div>
+                  <nav class="card-header-actions">
+                    <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
+                      <i data-feather="minus-circle"></i>
+                    </a>
+                    
+                    <div class="dropdown">
+                      <a class="card-header-action" href="#" role="button" id="card1Settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="settings"></i>
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="card1Settings">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-header-action">
+                      <i data-feather="x-circle"></i>
+                    </a>
+                  </nav>
                 </div>
                 <div class="card-body">
-                  <table class="table table-bordered mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Username</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <p>
+                    We added a sleek notification api with a lot of possibilites. Play around with the form to try it out!
+                  </p>
+
+                  <p>
+                    Firing a notification in your code is as simple as:
+                  </p>
+
+                  <pre><code class="js">notification.fire('This is a notification');</code></pre>
+
+                  <p>
+                    Available options for a single notification
+                  </p>
+
+                  <pre><code class="js">notification.fire('This is a notification', {<br />&nbsp;&nbsp;autoHide: false,<br />&nbsp;&nbsp;playSound: true,<br />&nbsp;&nbsp;duration: 5000,<br />&nbsp;&nbsp;style: 'default',<br />});</code></pre>
                 </div>
               </div>
-              <!-- // Table with border -->
-
-              <!-- Table small -->
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Table Small</div>
-                </div>
-                <table class="table table-sm mb-0">
-                  <thead>
-                    <tr>
-                      <th scope="col">First Name</th>
-                      <th scope="col">Last Name</th>
-                      <th scope="col">Username</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- // Table small -->
-
             </div>
 
-            <div class="col-md-6">
-
-              <!-- Table Seamless -->
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Table seamless</div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-header-title">Demo</div>
                 </div>
-                <table class="table table-hover mb-0">
-                  <thead>
-                    <tr>
-                      <th scope="col">First Name</th>
-                      <th scope="col">Last Name</th>
-                      <th scope="col">Username</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <div class="card-footer d-flex justify-content-end">
-                  <ul class="pagination pagination-clean pagination-sm mb-0">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" tabindex="-1">‹</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">›</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- // Table seamless -->
-
-              <!-- Table seamless striped -->
-              <div class="card mb-grid">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <div class="card-header-title">Table seamless (striped)</div>
-                </div>
-                <table class="table table-striped mb-0">
-                  <thead>
-                    <tr>
-                      <th scope="col">First Name</th>
-                      <th scope="col">Last Name</th>
-                      <th scope="col">Username</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <div class="card-footer d-flex justify-content-end">
-                  <ul class="pagination pagination-clean pagination-sm mb-0">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" tabindex="-1">‹</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">›</a>
-                    </li>
-                  </ul>
+                <div class="card-body">
+                  <form id="notificationDemo">
+                    <div class="form-group">
+                      <label class="form-label" for="demoText">Notification Text (html allowed)</label>
+                      <input type="text" class="form-control" name="demoText" id="demoText" placeholder="Text" value="This is a notification">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="demoStyle">Style</label>
+                      <select class="form-control" id="demoStyle" name="demoStyle">
+                        <option value="default">Default</option>
+                        <option class="text-danger" value="danger">Danger</option>
+                        <option class="text-info" value="info">Info</option>
+                        <option class="text-success" value="success">Success</option>
+                        <option class="text-secondary" value="secondary">Secondary</option>
+                        <option class="text-warning" value="warning">Warning</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Play sound?</label>
+                      <div>
+                        <label class="custom-control custom-radio">
+                          <input id="demoSoundOn" name="demoSound" value="1" checked="checked" type="radio" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Yes</span>
+                        </label>
+                        <label class="custom-control custom-radio">
+                          <input id="demoSoundOff" name="demoSound" value="0" type="radio" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">No</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Position</label>
+                      <div>
+                        <label class="custom-control custom-radio">
+                          <input id="demoPositionTop" name="demoPosition" value="top" checked="checked" type="radio" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Top</span>
+                        </label>
+                        <label class="custom-control custom-radio">
+                          <input id="demoPositionBototm" name="demoPosition" value="bottom" type="radio" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Bottom</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Auto hide notification</label>
+                      <div>
+                        <label class="custom-control custom-radio">
+                          <input id="demoAutoHideYes" name="demoAutoHide" value="1" checked="checked" type="radio" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Yes</span>
+                        </label>
+                        <label class="custom-control custom-radio">
+                          <input id="demoAutoHideNo" name="demoAutoHide" value="0" type="radio" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">No</span>
+                        </label>
+                      </div>
+                      <small class="form-text text-muted">
+                        It will close after 5 seconds by default but you can pass the duration when you fire a notification!
+                      </small>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary">Fire Notification</button>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <!-- // Table seamless striped -->
-
             </div>
           </div>
         </div>
@@ -716,5 +583,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../dist/js/adminx.js"></script>
+
+    <!-- this is only relevant for the demo -->
+    <script type="text/javascript" src="../dist/js/demo.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
