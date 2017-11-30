@@ -25,7 +25,16 @@ mix.options({
 
 mix.js('build/js/adminx.js', `${path}/js`)
    .js('build/js/demo.js', `${path}/js`)
+
+   // Compile scss
    .sass('build/scss/adminx.scss', `${path}/css`, { outputStyle: 'compressed', comments: false })
-   .copyDirectory('build/media', `${path}/media`);
+   .options({
+      processCssUrls: false
+   })
+   // Copy Notification Sound
+   .copyDirectory('build/media', `${path}/media`)
+
+   // Copy Icon Font
+   .copyDirectory('./node_modules/open-iconic/font/fonts', `${path}/fonts/iconic`);
 
 mix.browserSync('127.0.0.1:8080');
