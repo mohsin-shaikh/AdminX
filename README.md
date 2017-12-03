@@ -10,6 +10,9 @@ Credit is where credit's due: This admin template is inspired by the great [Admi
 ### Documentation
 As this template is still in very early stages of development a documentation is not yet available but the [Bootstrap documentation](http://getbootstrap.com/docs/4.0/getting-started/introduction/) may be a good first start for you to check out, as we try to use as many elements from it as possible.
 
+### jQuery & vanilla JS available 🎉
+As we are not using jQuery in a lot of projects we decided to maintain this theme with jQuery as well as vanilla JS. All our additional JavaScript is written without jQuery as a dependency. In [adminx.vanilla.js](dist/adminx.vanilla.js) we bundled [Bootstrap Native](https://github.com/thednp/bootstrap.native) so you can use all the Bootstrap components without jQuery. 👏 So we leave it up to you to use jQuery or not. :)
+
 ### Contribute
 It's probably to early to contribute yet, but if want to contribute you can fork this repo and create a pull request.
 

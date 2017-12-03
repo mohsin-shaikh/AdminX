@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
+    "bootstrap.native": "^2.0.21",
     "feather-icons": "^4.0.1",
     "inputmask": "^3.3.11",
     "open-iconic": "^1.1.1"

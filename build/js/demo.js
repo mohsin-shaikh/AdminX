@@ -1,22 +1,52 @@
 import NotificationHandler from './plugins/notifications';
 
-$(document).ready(function() {
+// thanks https://stackoverflow.com/a/35468919/5411503
+function setOrPush(target, val) {
+    var result = val;
+    if (target) {
+        result = [target];
+        result.push(val);
+    }
+    return result;
+}
+
+function getFormResults(formElement) {
+    var formElements = formElement.elements;
+    var formParams = {};
+    var i = 0;
+    var elem = null;
+    for (i = 0; i < formElements.length; i += 1) {
+      elem = formElements[i];
+      switch (elem.type) {
+        case 'submit':
+          break;
+        case 'radio':
+          if (elem.checked) {
+              formParams[elem.name] = elem.value;
+          }
+          break;
+        case 'checkbox':
+          if (elem.checked) {
+              formParams[elem.name] = setOrPush(formParams[elem.name], elem.value);
+          }
+          break;
+        default:
+            formParams[elem.name] = setOrPush(formParams[elem.name], elem.value);
+      }
+    }
+    return formParams;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
   const notificationTop = new NotificationHandler();
   const notificationBottom = new NotificationHandler({ position: 'bottom' });
 
-  $('#notificationDemo').on('submit', function(e) {
+  const notificationForm = document.getElementById('notificationDemo');
+
+  notificationForm.addEventListener("submit", e => {
     e.preventDefault();
 
-    const values = {};
-    $.each($(this).serializeArray(), function(_, kv) {
-      if (values.hasOwnProperty(kv.name)) {
-        values[kv.name] = $.makeArray(values[kv.name]);
-        values[kv.name].push(kv.value);
-      }
-      else {
-        values[kv.name] = kv.value;
-      }
-    });
+    const values = getFormResults(notificationForm);
 
     const options = {
       autoHide: values.demoAutoHide === "1" ? true : false,
@@ -31,21 +61,3 @@ $(document).ready(function() {
     }
   });
 });
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-
-  window.addEventListener('load', function() {
-    var form = document.getElementById('needs-validation');
-    if(form !== null) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    }
-  }, false);
-})();

@@ -5,3 +5,14 @@
 .flex-1 {
   flex: 1;
 }
+
+.toggle {
+  overflow: hidden;
+  transition: height .4s, padding .4s;
+}
+
+.toggle.is-hidden {
+  height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

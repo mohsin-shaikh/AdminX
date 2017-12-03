@@ -1,3 +1,5 @@
+import { removeClass, addClass } from '../utilities';
+
 class NotificationHandler {
   getDefaultOptions() {
     return {
@@ -13,23 +15,45 @@ class NotificationHandler {
     };
   }
 
+  randomID() {
+    return Math.random().toString(36).substr(2, 10);
+  }
+
+  getElementFromString(string) {
+    const helperDiv = document.createElement('div');
+    helperDiv.innerHTML = string;
+
+    return helperDiv.firstChild;
+  }
+
   constructor(options) {
     this.options = Object.assign({}, this.getDefaultOptions(), options);
 
-    // Create container element
-    this.container = $(`<div class="notifications notifications-position-${this.options.position}"></div>`).appendTo('body');
-    this.player = $(`
-      <audio preload="auto" volume="${this.options.volume}">
-        <source src="${this.options.notificationSound}" type="audio/mpeg" />
-        <embed hidden="true" autostart="true" loop="false" src="${this.options.notificationSound}" />
-      </audio>
-    `).appendTo('body');
-    this.player[0].volume = this.options.volume;
+    const randomContainerID = this.randomID();
+
+    document.body.appendChild(
+      this.getElementFromString(`<div id="${randomContainerID}" class="notifications notifications-position-${this.options.position}"></div>`)
+    );
+    this.container = document.getElementById(randomContainerID);
+
+    // random id for player
+    const randomAudioID = this.randomID();
+    document.body.appendChild(
+      this.getElementFromString(
+        `<audio preload="auto" volume="${this.options.volume}" id="${randomAudioID}">
+          <source src=${this.options.notificationSound} type="audio/mpeg" />
+          <embed hidden="true" loop="false" src="${this.options.notificationSound}" />
+        </audio>`
+      )
+    );
+
+    this.player = document.getElementById(randomAudioID);
+    this.player.load();
+    this.player.volume = this.options.volume;
   }
 
   generateNotificationCode(text, style) {
-    return `
-      <div class="notification notification-${style}">
+    return `<div class="notification notification-${style} toggle is-hidden">
         <div class="container d-flex justify-content-between align-items-center">
           <div class="notification-text">${text}</div>
           <button type="button" class="close" aria-label="Close">
@@ -39,38 +63,52 @@ class NotificationHandler {
             </svg>
           </button>
         </div>
-      </div>
-    `;
+      </div>`;
   }
 
   fire(text, forceOptions) {
     const options = Object.assign({}, this.options.notification, forceOptions);
 
-    // Play Notificatino sound
+    // Play Notification sound
     if (options.playSound === true) {
-      this.player.trigger("stop");
-      this.player.trigger("play");
+      this.player.pause();
+      this.player.currentTime = 0;
+      this.player.play();
     }
 
-    // append notification
-    const notification = $(this.generateNotificationCode(text, options.style)).prependTo(this.container);
-    notification.hide().slideDown();
+    const notification = this.container.appendChild(
+      this.getElementFromString(
+        this.generateNotificationCode(text, options.style)
+      )
+    );
 
-    // add close handler
-    notification.on('click', '.close', function(e) {
-      e.preventDefault();
+    // fire animation
+    setTimeout(function() {
+      removeClass(notification, 'is-hidden');
+    }, 10);
 
-      notification.slideUp(function() {
-        notification.remove();
+    const closeHandler = notification.querySelectorAll('.close');
+
+    Array.from(closeHandler).forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+
+        addClass(notification, 'is-hidden');
+
+        setTimeout(() => {
+          notification.remove();
+        }, 1000); // should be higher than transition time
       });
     });
 
     if (options.autoHide === true) {
-      setTimeout(function() {
-        notification.slideUp(function() {
+      setTimeout(() => {
+        addClass(notification, 'is-hidden');
+
+        setTimeout(() => {
           notification.remove();
-        });
-      }, options.duration)
+        }, 1000);
+      }, options.duration);
     }
   }
 }
