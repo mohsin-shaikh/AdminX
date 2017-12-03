@@ -4,9 +4,6 @@ AdminX is feature-packed, responsive admin template based on [Bootstrap 4](http:
 
 Check out the Demo [here](https://movact.github.io/AdminX/index.html) if you want to have a look at the current progress.
 
-### Credit
-Credit is where credit's due: This admin template is inspired by the great [AdminLTE](https://adminlte.io/), which is why you might encounter similarity in terms of scope, but we do write all our own components and don't use any of AdminLTEs code. AdminLTE is also based on Bootstrap 3 and therefore created with LESS instead of SASS, which is our "go to" css preprocessor. We also try to go for a more minimal, clean and modern design.
-
 ### Documentation
 As this template is still in very early stages of development a documentation is not yet available but the [Bootstrap documentation](http://getbootstrap.com/docs/4.0/getting-started/introduction/) may be a good first start for you to check out, as we try to use as many elements from it as possible.
 
@@ -35,6 +32,9 @@ If you're done and want to create a production build in the `/dist/` folder run
 ```bash
 npm run production
 ```
+
+### Credit
+Credit is where credit's due: This admin template is inspired by the great [AdminLTE](https://adminlte.io/), which is why you might encounter similarity in terms of scope, but we do write all our own components and don't use any of AdminLTEs code. AdminLTE is also based on Bootstrap 3 and therefore created with LESS instead of SASS, which is our "go to" css preprocessor. We also try to go for a more minimal, clean and modern design.
 
 ### License
 This project is licensed under [MIT](http://opensource.org/licenses/MIT).
