@@ -23,22 +23,22 @@ mix.options({
 });
 
 
-mix.js('build/js/vendor.js', `${path}/js`)
-   .js('build/js/adminx.js', `${path}/js`)
-   .js('build/js/adminx.vanilla.js', `${path}/js`)
-   .js('build/js/demo.js', `${path}/js`)
+mix.js('src/js/vendor.js', `${path}/js`)
+   .js('src/js/adminx.js', `${path}/js`)
+   .js('src/js/adminx.vanilla.js', `${path}/js`)
+   .js('src/js/demo.js', `${path}/js`)
 
    // Compile scss
-   .sass('build/scss/adminx.scss', `${path}/css`, { outputStyle: 'compressed', comments: false })
+   .sass('src/scss/adminx.scss', `${path}/css`, { outputStyle: 'compressed', comments: false })
    .options({
       processCssUrls: false
    })
    // Copy Notification Sound
-   .copyDirectory('build/media', `${path}/media`)
+   .copyDirectory('src/media', `${path}/media`)
 
    // Copy Icon Font
    .copyDirectory('./node_modules/open-iconic/font/fonts', `${path}/fonts/iconic`);
 
-mix.sass('build/scss/demo.scss', 'demo', { outputStyle: 'compressed', comments: false });
+mix.sass('src/scss/demo.scss', 'demo', { outputStyle: 'compressed', comments: false });
 
 mix.browserSync('127.0.0.1:8080');

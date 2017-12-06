@@ -10,6 +10,7 @@
     "choices.js": "^3.0.2",
     "cleave.js": "^1.0.7",
     "feather-icons": "^4.0.1",
+    "flatpickr": "^4.1.4",
     "open-iconic": "^1.1.1"
   },
   "devDependencies": {

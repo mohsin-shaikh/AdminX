@@ -47,6 +47,9 @@ $choices-primary-color: theme-color("primary");
 @import "~choices.js/assets/styles/scss/choices.scss";
 @import "vendor/choices.overrides";
 
+// Flatpickr
+@import "vendor/flatpickr";
+
 // UI Elements
 @import "ui/sidebar";
 @import "ui/nav";

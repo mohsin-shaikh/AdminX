@@ -449,33 +449,34 @@
             <div class="col-lg-6">
               <div class="card mb-grid">
                 <div class="card-header">
-                  <div class="card-header-title">Input sizes</div>
+                  <div class="card-header-title">Input Formats</div>
                 </div>
                 <div class="card-body">
                   <div class="form-group">
+                    <label class="form-label">Credit Card</label>
+                    <input class="form-control mb-2 input-credit-card" type="text" placeholder="Enter credit card number">
+                  </div>
+
+                  <div class="form-group">
                     <label class="form-label">Date</label>
-                    <input class="form-control mb-2" type="text" placeholder="Enter date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                    <input class="form-control input-date mb-2" type="text" placeholder="YYYY/MM/DD">
                   </div>
 
                   <div class="form-group">
-                    <label class="form-label">Phone Number (US)</label>
-                    <input class="form-control mb-2" type="text" placeholder="Enter phone number" data-inputmask='"mask": "(999) 999-9999"' data-mask>
+                    <label class="form-label">Numeral formatting</label>
+                    <input class="form-control input-numeral mb-2" type="text" placeholder="Enter a large number">
                   </div>
 
                   <div class="form-group">
-                    <label class="form-label">Phone Number (International)</label>
-                    <input class="form-control mb-2" type="text" placeholder="Enter phone number" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="form-label">IP Adress</label>
-                    <input class="form-control mb-2" type="text" placeholder="Enter IP" data-inputmask="'alias': 'ip'" data-mask>
+                    <label class="form-label">Prefix</label>
+                    <input class="form-control input-prefix mb-2" type="text">
                   </div>
                 </div>
+                <div class="card-footer">
+                  Cleave.js is a small library for input formatting. Check out their <a href="http://nosir.github.io/cleave.js/" target="_blank">documentation</a>. <strong>Nice to know:</strong> There are also Angular and ReactJS components available.
+                </div>
               </div>
-            </div>
 
-            <div class="col-lg-6">
               <div class="card mb-grid">
                 <div class="card-header">
                   <div class="card-header-title">Advanced Select (Choices.js)</div>
@@ -522,6 +523,39 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-lg-6">
+              <div class="card mb-grid">
+                <div class="card-header">
+                  <div class="card-header-title">Date Picker</div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="form-label">Date Picker Default</label>
+                    <input class="form-control mb-2 date-default" type="text" placeholder="Pick date">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Date &amp; Time Picker</label>
+                    <input class="form-control mb-2 date-time" type="text" placeholder="Pick date and time">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Humand friendly date</label>
+                    <input class="form-control date-human" type="text" placeholder="Pick date">
+                    <small id="emailHelp" class="form-text text-muted mb-2">Recommended for better UX</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Inline Calendar</label>
+                    <input class="form-control mb-2 date-inline" type="text" placeholder="Pick date">
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="https://chmln.github.io/flatpickr/" target="_blank">Flatpickr</a> is a light-weight library for picking dates and times. It is feature rich and supports date ranges, disabling dates, multiple dates and many more.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -540,10 +574,48 @@
     <script src="../dist/js/adminx.vanilla.js"></script-->
 
     <script>
-      const choices = new Choices('.js-choice');
+      var choices = new Choices('.js-choice');
 
-      const choices2 = new Choices('.js-choice-remove', {
+      var choices2 = new Choices('.js-choice-remove', {
         removeItemButton: true,
+      });
+
+      var cleave = new Cleave('.input-credit-card', {
+        creditCard: true,
+        onCreditCardTypeChanged: function (type) {
+          // update UI ...
+        }
+      });
+
+      var cleave2 = new Cleave('.input-date', {
+        date: true,
+        datePattern: ['Y', 'm', 'd']
+      });
+
+      var cleave3 = new Cleave('.input-numeral', {
+        numeral: true,
+        numeralThousandsGroupStyle: 'thousand'
+      });
+
+      var cleave = new Cleave('.input-prefix', {
+          prefix: 'INVOICE-',
+          uppercase: true
+      });
+
+      flatpickr(".date-default", {
+        allowInput: true
+      });
+      flatpickr(".date-time", {
+        allowInput: true,
+        enableTime: true,
+      });
+      flatpickr(".date-human", {
+        allowInput: true,
+        altInput: true,
+      });
+      flatpickr(".date-inline", {
+        allowInput: true,
+        inline: true,
       });
     </script>
   </body>
