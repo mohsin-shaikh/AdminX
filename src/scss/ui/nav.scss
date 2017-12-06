@@ -63,6 +63,19 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .navbar-expand .navbar-nav .dropdown-menu.dropdown-menu-notifications {
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+    top: 3.75rem;
+    max-width: initial;
+    border-radius: 0;
+    width: 100vw;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .nav-seperator {
     display: block;
