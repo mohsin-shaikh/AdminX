@@ -476,6 +476,51 @@
             </div>
 
             <div class="col-lg-6">
+              <div class="card mb-grid">
+                <div class="card-header">
+                  <div class="card-header-title">Advanced Select (Choices.js)</div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="form-label">Single Select</label>
+                    <select name="select" class="form-control js-choice">
+                      <option value="1">Sample value</option>
+                      <option value="2">Sample value 2</option>
+                      <option value="3">Sample value 3</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Single Select</label>
+                    <select name="select" class="form-control">
+                      <option value="1">Sample value</option>
+                      <option value="2">Sample value 2</option>
+                      <option value="3">Sample value 3</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Multiple Select</label>
+                    <select name="select" multiple class="form-control js-choice">
+                      <option value="1">Sample value</option>
+                      <option value="2" selected>Sample value 2</option>
+                      <option value="3">Sample value 3</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <label class="form-label">Multople Select With remove icon</label>
+                    <select name="select" multiple class="form-control js-choice-remove">
+                      <option value="1">Sample value</option>
+                      <option value="2" selected>Sample value 2</option>
+                      <option value="3">Sample value 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  Choices.js is a fantastic library for custom selects with tons of options. Check out their <a href="https://joshuajohnson.co.uk/Choices/" target="_blank">documentation</a> for more options and examples.
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -487,9 +532,19 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="../dist/js/vendor.js"></script>
     <script src="../dist/js/adminx.js"></script>
 
-    <!-- If you prefer vanilla JS this is the only required script -->
-    <!--script src="../dist/js/adminx.vanilla.js"></script-->
+    <!-- If you prefer vanilla JS these are the only required scripts -->
+    <!-- script src="../dist/js/vendor.js"></script>
+    <script src="../dist/js/adminx.vanilla.js"></script-->
+
+    <script>
+      const choices = new Choices('.js-choice');
+
+      const choices2 = new Choices('.js-choice-remove', {
+        removeItemButton: true,
+      });
+    </script>
   </body>
 </html>

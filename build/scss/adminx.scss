@@ -37,6 +37,17 @@ $icon-font-path: "../fonts/iconic/";
 
 @import "misc/utilities";
 
+// Choices
+$choices-border-radius: $input-border-radius;
+$choices-bg-color: $input-bg;
+$choices-font-size-lg: $font-size-base;
+$choices-text-color: $input-color;
+$choices-selector: 'choices';
+$choices-primary-color: theme-color("primary");
+@import "~choices.js/assets/styles/scss/choices.scss";
+@import "vendor/choices.overrides";
+
+// UI Elements
 @import "ui/sidebar";
 @import "ui/nav";
 @import "ui/navbar";
@@ -50,6 +61,7 @@ $icon-font-path: "../fonts/iconic/";
 @import "ui/notification";
 @import "ui/progress";
 
+// Page specific CSS
 @import "pages/login";
 @import "pages/error";
 

@@ -1,9 +1,8 @@
-import { removeClass, addClass } from '../utilities';
+import { removeClass, addClass } from '../util/utilities';
 
 class NotificationHandler {
   getDefaultOptions() {
     return {
-      position: 'top',
       notificationSound: '../dist/media/notification.mp3',
       volume: 0.2,
       notification: {
@@ -11,6 +10,7 @@ class NotificationHandler {
         playSound: true,
         duration: 5000,
         style: 'default',
+        position: 'top',
       },
     };
   }
@@ -29,12 +29,23 @@ class NotificationHandler {
   constructor(options) {
     this.options = Object.assign({}, this.getDefaultOptions(), options);
 
-    const randomContainerID = this.randomID();
+    this.container = {};
+
+    // Top Container
+    const randomTopContainerID = this.randomID();
 
     document.body.appendChild(
-      this.getElementFromString(`<div id="${randomContainerID}" class="notifications notifications-position-${this.options.position}"></div>`)
+      this.getElementFromString(`<div id="${randomTopContainerID}" class="notifications notifications-position-top"></div>`)
     );
-    this.container = document.getElementById(randomContainerID);
+    this.container.top = document.getElementById(randomTopContainerID);
+
+    // Bottom Container
+    const randomBottomContainerID = this.randomID();
+
+    document.body.appendChild(
+      this.getElementFromString(`<div id="${randomBottomContainerID}" class="notifications notifications-position-bottom"></div>`)
+    );
+    this.container.bottom = document.getElementById(randomBottomContainerID);
 
     // random id for player
     const randomAudioID = this.randomID();
@@ -76,7 +87,7 @@ class NotificationHandler {
       this.player.play();
     }
 
-    const notification = this.container.appendChild(
+    const notification = this.container[options.position].appendChild(
       this.getElementFromString(
         this.generateNotificationCode(text, options.style)
       )
@@ -113,4 +124,4 @@ class NotificationHandler {
   }
 }
 
-export default NotificationHandler;
+window.notifications = new NotificationHandler();

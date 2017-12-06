@@ -23,7 +23,8 @@ mix.options({
 });
 
 
-mix.js('build/js/adminx.js', `${path}/js`)
+mix.js('build/js/vendor.js', `${path}/js`)
+   .js('build/js/adminx.js', `${path}/js`)
    .js('build/js/adminx.vanilla.js', `${path}/js`)
    .js('build/js/demo.js', `${path}/js`)
 

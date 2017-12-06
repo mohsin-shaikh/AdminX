@@ -5,10 +5,7 @@
  */
 
  // feel free to comment out what you don't need
-require('./polyfills');
-require('./tables');
-require('./inputmasks');
-require('./sidebar');
-
-// Feather Icons
-require('./feather');
+require('./util/polyfills');
+require('./components/tables');
+require('./components/sidebar');
+require('./components/notifications');
