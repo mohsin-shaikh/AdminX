@@ -1,4 +1,4 @@
-# AdminX (WIP)
+# AdminX
 
 AdminX is feature-packed, responsive admin template based on [Bootstrap 4](http://getbootstrap.com/). It's currently under active development so if you have any idea on what you like to see in it, feel free to tell us.
 
