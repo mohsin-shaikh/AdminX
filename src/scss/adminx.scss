@@ -4,31 +4,31 @@
  * Licensed under MIT (https://github.com/movact/AdminX/blob/master/LICENSE)
  */
 
-$body-bg: #f6f9fa;
-$enable-gradients: true;
-$headings-font-weight: 300;
+$body-bg: #f6f9fa !default;
+$enable-gradients: true !default;
+$headings-font-weight: 300 !default;
 
-$sidebar-zindex: 1440;
-$sidebar-width: 260px;
-$sidebar-collapsed-width: 4rem;
+$sidebar-zindex: 1440 !default;
+$sidebar-width: 260px !default;
+$sidebar-collapsed-width: 4rem !default;
 
-$breadcrumb-bg: transparent;
-$breadcrumb-padding-y: 0;
-$breadcrumb-padding-x: 0;
-$breadcrumb-divider: "›";
-$breadcrumb-margin-bottom: .5rem;
+$breadcrumb-bg: transparent !default;
+$breadcrumb-padding-y: 0 !default;
+$breadcrumb-padding-x: 0 !default;
+$breadcrumb-divider: "›" !default;
+$breadcrumb-margin-bottom: .5rem !default;
 
-$card-border-radius: 0;
-$card-cap-bg: transparent;
+$card-border-radius: 0 !default;
+$card-cap-bg: transparent !default;
 
-$table-hover-bg: #f4f9fe;
-$table-accent-bg: #f9f9f9;
-$table-selected-bg: #FFFBCC;
+$table-hover-bg: #f4f9fe !default;
+$table-accent-bg: #f9f9f9 !default;
+$table-selected-bg: #FFFBCC !default;
 
-$input-btn-padding-y: 0.5rem;
-$input-btn-focus-width: 0.1rem;
+$input-btn-padding-y: 0.5rem !default;
+$input-btn-focus-width: 0.1rem !default;
 
-$notifications-zindex: 2000;
+$notifications-zindex: 2000 !default;
 
 $icon-font-path: "../fonts/iconic/";
 
@@ -38,12 +38,12 @@ $icon-font-path: "../fonts/iconic/";
 @import "misc/utilities";
 
 // Choices
-$choices-border-radius: $input-border-radius;
-$choices-bg-color: $input-bg;
-$choices-font-size-lg: $font-size-base;
-$choices-text-color: $input-color;
-$choices-selector: 'choices';
-$choices-primary-color: theme-color("primary");
+$choices-border-radius: $input-border-radius !default;
+$choices-bg-color: $input-bg !default;
+$choices-font-size-lg: $font-size-base !default;
+$choices-text-color: $input-color !default;
+$choices-selector: 'choices' !default;
+$choices-primary-color: theme-color("primary") !default;
 @import "~choices.js/assets/styles/scss/choices.scss";
 @import "vendor/choices.overrides";
 
@@ -51,6 +51,7 @@ $choices-primary-color: theme-color("primary");
 @import "vendor/flatpickr";
 
 // UI Elements
+@import "ui/base";
 @import "ui/sidebar";
 @import "ui/nav";
 @import "ui/navbar";
@@ -67,18 +68,3 @@ $choices-primary-color: theme-color("primary");
 // Page specific CSS
 @import "pages/login";
 @import "pages/error";
-
-.adminx-container {
-  width: 100%;
-  height: 100vh;
-  @include transition;
-}
-.adminx-content {
-  @include transition;
-}
-
-@include media-breakpoint-up(md) {
-  .adminx-content {
-    padding-left: $sidebar-width;
-  }
-}

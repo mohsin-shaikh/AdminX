@@ -1,0 +1,14 @@
+.adminx-container {
+  width: 100%;
+  height: 100vh;
+  @include transition;
+}
+.adminx-content {
+  @include transition;
+}
+
+@include media-breakpoint-up(md) {
+  .adminx-content {
+    padding-left: $sidebar-width;
+  }
+}
