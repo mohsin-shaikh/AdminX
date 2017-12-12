@@ -124,4 +124,4 @@ class NotificationHandler {
   }
 }
 
-window.notifications = new NotificationHandler();
+window.notifications = NotificationHandler;

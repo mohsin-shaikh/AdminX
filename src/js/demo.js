@@ -8,6 +8,8 @@ function setOrPush(target, val) {
     return result;
 }
 
+const notifications = new window.notifications();
+
 function getFormResults(formElement) {
     var formElements = formElement.elements;
     var formParams = {};

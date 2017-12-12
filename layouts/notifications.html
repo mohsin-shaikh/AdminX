@@ -470,6 +470,18 @@
                   </p>
 
                   <pre><code class="js">notification.fire('This is a notification', {<br />&nbsp;&nbsp;autoHide: false,<br />&nbsp;&nbsp;playSound: true,<br />&nbsp;&nbsp;duration: 5000,<br />&nbsp;&nbsp;style: 'default',<br />});</code></pre>
+
+                  <p>
+                    Notifications need to be initalized before you can use them. It's as simple as:
+                  </p>
+
+                  <pre><code class="js">const notifications = new window.notifications();</code></pre>
+
+                  <p>
+                    There comes a set of options you can override on initialization.
+                  </p>
+
+                  <pre><code class="js">const notifications = new window.notifications({<br />&nbsp;&nbsp;notificationSound: '../dist/media/notification.mp3',<br />&nbsp;&nbsp;volume: 0.2,<br />&nbsp;&nbsp;notification: {<br />&nbsp;&nbsp;&nbsp;&nbsp;autoHide: false,<br />&nbsp;&nbsp;&nbsp;&nbsp;playSound: true,<br />&nbsp;&nbsp;&nbsp;&nbsp;duration: 5000,<br />&nbsp;&nbsp;&nbsp;&nbsp;style: 'default',<br />&nbsp;&nbsp;&nbsp;&nbsp;position: 'top',<br />&nbsp;&nbsp;}<br />});</code></pre>
                 </div>
               </div>
             </div>
