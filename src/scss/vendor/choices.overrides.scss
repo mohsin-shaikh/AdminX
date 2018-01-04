@@ -40,3 +40,8 @@
     transform: rotate(-45deg);
   }
 }
+
+.#{$choices-selector}__list--multiple .#{$choices-selector}__item {
+  padding: 2px 8px;
+  margin-bottom: 2.75px;
+}
