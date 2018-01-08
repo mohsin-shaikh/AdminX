@@ -321,8 +321,10 @@
         <nav class="navbar navbar-expand justify-content-between fixed-top navbar-light">
           <form class="form-inline form-quicksearch d-none d-md-block">
             <div class="input-group">
-              <div class="input-group-addon">
-                <i data-feather="search"></i>
+              <div class="input-group-prepend">
+                <div class="input-group-icon">
+                  <i data-feather="search"></i>
+                </div>
               </div>
               <input type="text" class="form-control" id="search" placeholder="Type to search...">
             </div>
@@ -462,12 +464,11 @@
                       <label class="form-label" for="exampleInputPassword1">Password</label>
                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
-                    <div class="form-check">
-                      <label class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input">
-                        <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Remember me</span>
-                      </label>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Remember me</label>
+                      </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
@@ -561,10 +562,10 @@
                   File upload
                 </div>
                 <div class="card-body">
-                  <label class="custom-file">
-                    <input type="file" id="file2" class="custom-file-input">
-                    <span class="custom-file-control"></span>
-                  </label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                  </div>
                 </div>
               </div>
             </div>

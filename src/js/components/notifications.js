@@ -4,7 +4,7 @@ class NotificationHandler {
   getDefaultOptions() {
     return {
       notificationSound: '../dist/media/notification.mp3',
-      volume: 0.2,
+      volume: 1,
       notification: {
         autoHide: false,
         playSound: true,
