@@ -6,6 +6,7 @@
 
  // feel free to comment out what you don't need
 import bsn from 'bootstrap.native/dist/bootstrap-native-v4';
+window.bsn = bsn;
 
 require('./util/polyfills');
 require('./components/tables');
