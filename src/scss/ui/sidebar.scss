@@ -127,7 +127,10 @@
       }
 
       + .adminx-content {
-        transform: translateX(calc(#{$sidebar-width} - #{$sidebar-collapsed-width}));
+        .adminx-main-content,
+        .adminx-aside {
+          transform: translateX(calc(#{$sidebar-width} - #{$sidebar-collapsed-width}));
+        }
       }
     }
   }

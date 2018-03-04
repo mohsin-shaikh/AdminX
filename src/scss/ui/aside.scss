@@ -1,5 +1,4 @@
 .adminx-aside {
-  position: absolute;
   background: #fff;
   z-index: $aside-zindex;
   @include transition;
@@ -8,10 +7,11 @@
 
 @include media-breakpoint-up(md) {
   .adminx-aside {
-    position: absolute;
+    position: fixed;
     left: $sidebar-collapsed-width;
     width: $aside-width;
-    top: 0;
+    top: $navbar-height;
+    overflow: auto;
     bottom: 0;
   }
 }
