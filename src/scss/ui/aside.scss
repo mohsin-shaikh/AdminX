@@ -1,0 +1,17 @@
+.adminx-aside {
+  position: absolute;
+  background: #fff;
+  z-index: $aside-zindex;
+  @include transition;
+  border-right: 1px solid darken($body-bg, 5%);
+}
+
+@include media-breakpoint-up(md) {
+  .adminx-aside {
+    position: absolute;
+    left: $sidebar-collapsed-width;
+    width: $aside-width;
+    top: 0;
+    bottom: 0;
+  }
+}

@@ -12,8 +12,12 @@ $sidebar-zindex: 1040 !default;
 $sidebar-width: 260px !default;
 $sidebar-collapsed-width: 4rem !default;
 
+$aside-width: 260px !default;
+$aside-zindex: 1020 !default;
+
 $navbar-avatar-size: 1.875rem !default;
 $navbar-avatar-border-radius: 1rem !default;
+$navbar-height: 3.5rem !default;
 
 $breadcrumb-bg: transparent !default;
 $breadcrumb-padding-y: 0 !default;
@@ -57,6 +61,7 @@ $choices-primary-color: theme-color("primary") !default;
 // UI Elements
 @import "ui/base";
 @import "ui/sidebar";
+@import "ui/aside";
 @import "ui/nav";
 @import "ui/navbar";
 @import "ui/breadcrumb";
@@ -68,6 +73,7 @@ $choices-primary-color: theme-color("primary") !default;
 @import "ui/button";
 @import "ui/notification";
 @import "ui/progress";
+@import "ui/list-group";
 
 // Page specific CSS
 @import "pages/login";

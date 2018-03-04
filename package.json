@@ -1,6 +1,6 @@
 {
   "name": "adminx",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Bootstrap 4 based Admin Template",
   "repository": "https://mxmtsk@github.com/MOVACT/AdminX.git",
   "main": "dist/js/adminx.js",

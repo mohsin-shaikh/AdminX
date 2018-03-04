@@ -1,11 +1,14 @@
-.adminx-header {
-  height: 3.5rem;
-  font-size: $font-size-sm;
-
+.adminx-container {
   .navbar {
-    @include transition;
+    font-size: $font-size-sm;
     background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: $navbar-height;
+    padding: 0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+  }
+
+  .navbar-brand {
+    padding-left: 1.2rem;
   }
 }
 
@@ -81,7 +84,7 @@
     font-size: .875rem;
     border: 0;
     border-radius: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     &:last-child {
       border-bottom: 0;
     }
@@ -112,11 +115,5 @@
     &:after {
       display: inline-block;
     }
-  }
-
-  .adminx-header .navbar {
-    padding-left: calc(#{$sidebar-width} + 15px);
-    background: $body-bg;
-    border-bottom: 0;
   }
 }
