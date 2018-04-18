@@ -1,6 +1,6 @@
 {
   "name": "adminx",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Bootstrap 4 based Admin Template",
   "repository": "https://mxmtsk@github.com/MOVACT/AdminX.git",
   "main": "dist/js/adminx.js",
@@ -16,8 +16,8 @@
     "url": "https://github.com/MOVACT/AdminX/issues"
   },
   "dependencies": {
-    "bootstrap": "4.0.0",
-    "bootstrap.native": "^2.0.21",
+    "bootstrap": "4.1",
+    "bootstrap.native": "2.0.22",
     "choices.js": "^3.0.2",
     "cleave.js": "^1.0.7",
     "feather-icons": "^4.0.1",
