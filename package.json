@@ -18,7 +18,7 @@
   "dependencies": {
     "bootstrap": "4.1.2",
     "bootstrap.native": "2.0.22",
-    "choices.js": "^3.0.2",
+    "choices.js": "^9.0.1",
     "cleave.js": "^1.0.7",
     "feather-icons": "^4.0.1",
     "flatpickr": "^4.1.4",
