@@ -16,7 +16,7 @@
     "url": "https://github.com/MOVACT/AdminX/issues"
   },
   "dependencies": {
-    "bootstrap": "4.1.2",
+    "bootstrap": "4.3.1",
     "bootstrap.native": "2.0.22",
     "choices.js": "^3.0.2",
     "cleave.js": "^1.0.7",
